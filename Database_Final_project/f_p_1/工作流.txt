@@ -1,4 +1,23 @@
-﻿檔案名稱 行數 //更動內容
+#我的部分以宇霆傳的版本為基礎看的
+
+#詳見子分頁
+
+#除錯#
+
+檔案名稱 行數 //更動內容
+
+manage_disputes L65 //AdminID->HandlerID
+
+apply_team L18 // null -> $date = date('Y-m-d');
+	L19 // Join_Date) VALUES (?, ?, NULL)"); -> Join_Date, Leave_Date) VALUES (?, ?, $date, NULL)");	or	join_day 可設為null ?
+
+index L30 // $email = $_POST['email']; -> null
+L40 // , Email) VALUES (?, ?, ?, ?)"); -> ) VALUES (?, ?, ?)");
+	L41 // , $email]); -> ]);
+
+#改善#
+
+檔案名稱 行數 //更動內容
 # null = 原本沒這行
 
 
@@ -7,3 +26,21 @@ index L37 // null ->echo '<script>  alert("帳號已存在");   </script>';
 
 
 update_profile L52 // null -> $_SESSION['user_name'] = $name;
+
+#討論#
+
+學生端
+學生申請加入隊伍之後隊長如何審核呢 ?
+
+e-mail是本來user有後來決定刪除的項目嗎
+
+有隊友評價紀錄，但是如何評價隊友呢，評價頁面 ?
+
+原本預計有查看隊伍成員的功能嗎 ?
+
+側邊欄有些分頁顯示有些分頁不顯示，是原本的設計嗎
+
+TeamMembershipHistory 中 join_date 不可為null, 但 manage_invitation中以是否為null當審核標準 ?
+
+管理者端
+競賽分類的管理，有新增功能嗎
