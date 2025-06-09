@@ -1,0 +1,9 @@
+﻿檔案名稱 行數 //更動內容
+# null = 原本沒這行
+
+
+index L37 // null ->echo '<script>  alert("帳號已存在");   </script>';
+        L48  // null -> echo '<script>  alert("註冊成功，請登入");   </script>';
+
+
+update_profile L52 // null -> $_SESSION['user_name'] = $name;
